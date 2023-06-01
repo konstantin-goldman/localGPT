@@ -31,7 +31,7 @@ def main(device_type, ):
     else:
         device='cuda'
 
-    print(f"Running on: {device}")
+    print(f"Running on: {device}, with type {device_type}")
         
     embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl",
                                                 model_kwargs={"device": device})

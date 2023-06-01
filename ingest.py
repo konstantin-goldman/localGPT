@@ -37,7 +37,7 @@ def main(device_type, ):
         device='cuda'
 
     # Load documents and split in chunks
-    print(f"Loading documents from {SOURCE_DIRECTORY}")
+    print(f"Loading documents from {SOURCE_DIRECTORY} for device {device}")
     documents = load_documents(SOURCE_DIRECTORY)
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
     texts = text_splitter.split_documents(documents)
